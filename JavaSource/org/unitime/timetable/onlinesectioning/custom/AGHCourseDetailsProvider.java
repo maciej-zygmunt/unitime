@@ -181,20 +181,7 @@ public class AGHCourseDetailsProvider implements CourseDetailsProvider, CourseUr
 		if (term.toLowerCase().endsWith("zimowy")) sessionShift=0;
 		if (term.toLowerCase().endsWith("letni")) sessionShift=1;
 		else sessionShift=0;
-		/*		
-		switch (session) {
-		case "Semestr zimowy":
-			sessionShift = 0;
-			break;
-		case "Semestr letni":
-			sessionShift = 1;
-			break;
-		default:
-			sessionShift = 0;
-			break;
-
-		}
-		*/
+		
 		// div 2 (two semesters per year)
 		yearShift = (classification - sessionShift) / 2;
 		// current year minus shift

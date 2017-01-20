@@ -179,6 +179,7 @@ public class AGHCourseDetailsProvider implements CourseDetailsProvider, CourseUr
 		Integer yearShift=0, yearLink, academicShift=0;
 		Boolean winterApplication=false;
 		String syllabusLinkRw = "current_annual"; // newest syllabus
+
 		if (term.toLowerCase().endsWith("zimowy")) {
 			if ((classification % 2) == 0) { // even
 				winterApplication = true;
@@ -200,6 +201,7 @@ public class AGHCourseDetailsProvider implements CourseDetailsProvider, CourseUr
 
 		// div 2 (two semesters per year) add shift for winter applications
 		yearShift = (classification + academicShift) / 2;
+
 		// current year minus shift
 		yearLink = year - yearShift;
 		// link = beginning + next year
